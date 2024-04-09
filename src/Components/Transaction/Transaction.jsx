@@ -11,7 +11,7 @@ function Transaction({ transaction }) {
     useEffect(() => {
         axios.get(`/api/categories`)
             .then(response => {
-                setCategory(response.data.filter(category => category.category_id === transaction.category_id)[0].name)
+                setCategory(response.data.filter(response => response.category_id === transaction.category_id)[0].name)
             })
             .catch(error => {
                 console.error('There was an error!', error);
