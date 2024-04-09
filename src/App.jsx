@@ -15,7 +15,7 @@ function App() {
       <Container fluid>
         <Row>
           <Col>
-            <h1>Donut Transaction List</h1>
+            <h3>Transaction List</h3>
           </Col>
           <Col>
             <h1>Donut Category Pie Chart</h1>
