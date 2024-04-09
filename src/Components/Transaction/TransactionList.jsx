@@ -26,7 +26,7 @@ function TransactionList() {
         <div>
             <Stack direction="horizontal" gap={3}>
                 <h3 className='me-auto'>Transactions</h3>
-                <Button variant="primary"><FontAwesomeIcon icon="fa-solid fa-plus" /></Button>
+                <Button variant="primary"><FontAwesomeIcon icon={faPlus} /></Button>
             </Stack>
             
             <Table striped hover>
