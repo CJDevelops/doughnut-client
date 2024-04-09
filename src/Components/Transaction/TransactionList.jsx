@@ -1,9 +1,11 @@
 import React from 'react';
+import Transaction from './Transaction';
 
 function TransactionList() {
     return (
         <div>
-            <h1>Transaction List</h1>
+            <h6>Transaction List</h6>
+            <Transaction />
         </div>
     );
 }
