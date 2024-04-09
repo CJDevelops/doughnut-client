@@ -21,10 +21,10 @@ const AddTransaction = () => {
     const [form, setForm] = useState({
         name: '',
         amount: '',
-        category: '',
-        subcategory: '',
-        currency: '',
-        type: ''
+        category: categories[0]?.category_id,
+        subcategory: subcategories[0]?.subcategory_id,
+        currency: currencies[0]?.currency_id,
+        type: 'I',
     });
     const [errors, setErrors] = useState({ name: '', amount: '' });
 
@@ -66,7 +66,6 @@ const AddTransaction = () => {
                 <Modal.Body>
 
                 <Form onSubmit={handleSubmit}>
-
                     <Form.Group controlId="formName">
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="text" name="name" value={form.name} onChange={handleChange} isInvalid={!!errors.name} required />
