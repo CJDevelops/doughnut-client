@@ -22,7 +22,7 @@ function TransactionList() {
     return (
         <div>
             <Stack direction="horizontal" gap={3}>
-                <h3>Transactions</h3>
+                <h3 className='me-auto'>Transactions</h3>
                 <Button variant="primary">+</Button>
             </Stack>
             
