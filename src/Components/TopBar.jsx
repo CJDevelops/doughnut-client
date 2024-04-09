@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function TopBar() {
     return (
-        <Navbar>
+        <Navbar className="bg-body-tertiary">
             <Navbar.Brand href="#home">Doughnut</Navbar.Brand>
             <Nav className="me-auto">
                 <Nav.Link href="#home">Home</Nav.Link>
