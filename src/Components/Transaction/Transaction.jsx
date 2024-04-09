@@ -41,7 +41,7 @@ function Transaction({ transaction }) {
             <td>{transaction.transaction_name}</td>
             <td>{new Date(transaction.transaction_date).toLocaleDateString()}</td>
             <td>{transaction.transaction_amount}</td>
-            <td>{transaction.category_id}</td>
+            <td>{category}</td>
             <td>{transaction.subcategory_id}</td>
             <td>{transaction.currency_id}</td>
             <td>{transaction.user_id}</td>
