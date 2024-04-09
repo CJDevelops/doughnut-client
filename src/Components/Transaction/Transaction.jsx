@@ -16,17 +16,17 @@ function Transaction({ transaction }) {
                 console.error('There was an error!', error);
             });
 
-        axios.get(`/api/subcategories/${transaction.subcategory_id}`)
+        axios.get(`/api/subcategories`)
             .then(response => {
-                setSubcategory(response.data.name);
+                setSubcategory(response.data.filter(subcategory => subcategory.subcategory_id === transaction.subcategory_id)[0].name)
             })
             .catch(error => {
                 console.error('There was an error!', error);
             });
 
-        axios.get(`/api/users/${transaction.user_id}`)
+        axios.get(`/api/users`)
             .then(response => {
-                setUser(response.data.name);
+                setUser(response.data.filter(user => user.user_id === transaction.user_id)[0].name)
             })
             .catch(error => {
                 console.error('There was an error!', error);
