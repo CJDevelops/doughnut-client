@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import Badge from 'react-bootstrap/Badge';
+
 function Transaction({ transaction }) {
 
     const [category, setCategory] = useState('');
@@ -52,7 +54,7 @@ function Transaction({ transaction }) {
             <td>{subcategory}</td>
             <td>{currency}</td>
             <td>{user}</td>
-            <td>{transaction.transaction_type === 'I' ? 'Income' : 'Expense'}</td>
+            <td>{transaction.transaction_type === 'I' ? '<Badge pill bg="sucess">Income</Badge>' : 'Expense'}</td>
         </>
     );
 }
