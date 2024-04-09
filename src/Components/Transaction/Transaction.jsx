@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 
 function Transaction({ transaction }) {
+
     const [category, setCategory] = useState('');
     const [subcategory, setSubcategory] = useState('');
     const [user, setUser] = useState('');
@@ -33,17 +33,19 @@ function Transaction({ transaction }) {
             });
     }, [transaction]);
 
+
     return (
-        <div>
-            <h6>Transaction ID: {transaction.transaction_id}</h6>
-            <p>Name: {transaction.transaction_name}</p>
-            <p>Date: {new Date(transaction.transaction_date).toLocaleDateString()}</p>
-            <p>Amount: {transaction.transaction_amount}</p>
-            <p>Category: {category}</p>
-            <p>Subcategory: {subcategory}</p>
-            <p>User: {user}</p>
-            <p>Type: {transaction.transaction_type}</p>
-        </div>
+        <>
+            <td>{transaction.transaction_id}</td>
+            <td>{transaction.transaction_name}</td>
+            <td>{new Date(transaction.transaction_date).toLocaleDateString()}</td>
+            <td>{transaction.transaction_amount}</td>
+            <td>{transaction.category_id}</td>
+            <td>{transaction.subcategory_id}</td>
+            <td>{transaction.currency_id}</td>
+            <td>{transaction.user_id}</td>
+            <td>{transaction.transaction_type}</td>
+        </>
     );
 }
 
@@ -55,6 +57,7 @@ Transaction.propTypes = {
         transaction_amount: PropTypes.string.isRequired,
         category_id: PropTypes.number.isRequired,
         subcategory_id: PropTypes.number.isRequired,
+        currency_id: PropTypes.number.isRequired,
         user_id: PropTypes.number.isRequired,
         transaction_type: PropTypes.string.isRequired
     }).isRequired
