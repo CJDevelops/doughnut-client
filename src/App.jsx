@@ -17,8 +17,9 @@ function App() {
 
   return (
     <>
+      <TopBar />
       <Container fluid>
-        <TopBar />
+        
         <Row>
           <Col>
             <TransactionList />
