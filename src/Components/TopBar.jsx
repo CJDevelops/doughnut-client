@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 function TopBar() {
     return (
         <Navbar className="bg-body-tertiary">
-            <Container>
+            <Container fluid>
             <Navbar.Brand href="#home">Doughnut</Navbar.Brand>
             <Nav className="me-auto">
                 <Nav.Link href="#home">Home</Nav.Link>
