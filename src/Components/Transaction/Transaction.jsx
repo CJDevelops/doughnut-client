@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import axios from 'axios';
 
 function Transaction({ transaction }) {
@@ -57,7 +56,6 @@ function Transaction({ transaction }) {
         </>
     );
 }
-
 
 
 export default Transaction;
