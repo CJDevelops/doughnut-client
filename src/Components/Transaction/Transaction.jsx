@@ -46,7 +46,6 @@ function Transaction({ transaction }) {
 
     return (
         <>
-            <td>{transaction.transaction_id}</td>
             <td>{transaction.transaction_name}</td>
             <td>{new Date(transaction.transaction_date).toLocaleDateString()}</td>
             <td>{transaction.transaction_amount}</td>
