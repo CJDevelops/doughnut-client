@@ -42,7 +42,16 @@ const AddTransaction = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Submit form data
+        // Validation
+        let formErrors = {};
+        if (!form.name) formErrors.name = 'Name is required';
+        if (!form.amount) formErrors.amount = 'Amount is required';
+        setErrors(formErrors);
+
+        if (Object.keys(formErrors).length === 0) {
+            // No errors, submit the form
+            console.log('Form submitted');
+        }
     };
 
     return (
@@ -60,11 +69,13 @@ const AddTransaction = () => {
                     <Form.Group controlId="formName">
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="text" name="name" value={form.name} onChange={handleChange} required />
+                        {errors.name && <p>{errors.name}</p>}
                     </Form.Group>
 
                     <Form.Group controlId="formAmount">
                         <Form.Label>Amount</Form.Label>
                         <Form.Control type="number" name="amount" value={form.amount} onChange={handleChange} required />
+                        {errors.amount && <p>{errors.amount}</p>}
                     </Form.Group>
 
                     <Form.Group controlId="formCategory">
@@ -94,7 +105,7 @@ const AddTransaction = () => {
                             <option value="I">Income</option>
                             <option value="E">Expense</option>
                         </Form.Control>
-                        
+
                     </Form.Group>
                 </Form>
 
