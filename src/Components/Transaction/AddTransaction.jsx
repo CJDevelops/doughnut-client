@@ -22,7 +22,11 @@ const AddTransaction = () => {
                     <Modal.Title>Add Transaction</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>Modal body text goes here.</p>
+
+                    <Form>
+                        
+                    </Form>
+
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="danger" onClick={handleClose}>
