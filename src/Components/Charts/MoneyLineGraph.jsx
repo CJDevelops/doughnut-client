@@ -3,7 +3,7 @@ import React from 'react';
 function MoneyLineGraph() {
     return (
         <div>
-            <h1>Transaction List</h1>
+            <h3>Money Line Graphc Goes Here</h3>
         </div>
     );
 }
