@@ -69,7 +69,7 @@ const AddTransaction = () => {
 
                     <Form.Group controlId="formName">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" name="name" value={form.name} onChange={handleChange} required />
+                        <Form.Control type="text" name="name" value={form.name} onChange={handleChange} isInvalid={!!errors.name} required />
                         {errors.name && <Form.Control.Feedback type='invalid'>{errors.name}</Form.Control.Feedback>}
                     </Form.Group>
 
