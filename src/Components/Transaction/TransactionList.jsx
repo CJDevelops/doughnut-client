@@ -23,8 +23,7 @@ function TransactionList() {
         <div>
             <Stack direction="horizontal" gap={3}>
                 <h3>Transactions</h3>
-                <Button variant="primary">Add Transaction</Button>
-                <Button variant="secondary">Refresh</Button>
+                <Button variant="primary">+</Button>
             </Stack>
             
             <Table striped hover>
