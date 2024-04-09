@@ -54,7 +54,7 @@ function Transaction({ transaction }) {
             <td>{subcategory}</td>
             <td>{currency}</td>
             <td>{user}</td>
-            <td>{transaction.transaction_type}</td>
+            <td>{transaction.transaction_type === 'I' ? 'Income' : 'Expense'}</td>
         </>
     );
 }
