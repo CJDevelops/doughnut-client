@@ -44,6 +44,11 @@ function Transaction({ transaction }) {
             });
     }, [transaction]);
 
+    function TransactionTypeBadge({ type }) {
+        const badgeProps = type === 'I' ? { bg: 'success', children: 'Income' } : { bg: 'danger', children: 'Expense' };
+        return <Badge pill {...badgeProps} />;
+    }
+
 
     return (
         <>
@@ -54,7 +59,7 @@ function Transaction({ transaction }) {
             <td>{subcategory}</td>
             <td>{currency}</td>
             <td>{user}</td>
-            <td>{transaction.transaction_type === 'I' ? <Badge pill bg="success">Income</Badge> : <Badge pill bg="danger">Expense</Badge>}</td>
+            <td><td><TransactionTypeBadge type={transaction.transaction_type} /></td></td>
         </>
     );
 }
