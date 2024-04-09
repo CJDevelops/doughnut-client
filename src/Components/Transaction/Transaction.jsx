@@ -42,9 +42,9 @@ function Transaction({ transaction }) {
             <td>{new Date(transaction.transaction_date).toLocaleDateString()}</td>
             <td>{transaction.transaction_amount}</td>
             <td>{category}</td>
-            <td>{transaction.subcategory_id}</td>
+            <td>{subcategory}</td>
             <td>{transaction.currency_id}</td>
-            <td>{transaction.user_id}</td>
+            <td>{user}</td>
             <td>{transaction.transaction_type}</td>
         </>
     );
