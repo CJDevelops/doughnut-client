@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Transaction({ transaction }) {
     return (
-        <div>
+        <tr>
             <td>Transaction ID: {transaction.transaction_id}</td>
             <td>Name: {transaction.transaction_name}</td>
             <td>Date: {new Date(transaction.transaction_date).toLocaleDateString()}</td>
@@ -13,7 +13,7 @@ function Transaction({ transaction }) {
             <td>Currency ID: {transaction.currency_id}</td>
             <td>User ID: {transaction.user_id}</td>
             <td>Type: {transaction.transaction_type}</td>
-        </div>
+        </tr>
     );
 }
 
