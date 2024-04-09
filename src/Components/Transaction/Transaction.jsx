@@ -6,6 +6,7 @@ function Transaction({ transaction }) {
 
     const [category, setCategory] = useState('');
     const [subcategory, setSubcategory] = useState('');
+    const [currency, setCurrency] = useState('');
     const [user, setUser] = useState('');
 
     useEffect(() => {
@@ -20,6 +21,14 @@ function Transaction({ transaction }) {
         axios.get(`/api/subcategories`)
             .then(response => {
                 setSubcategory(response.data.filter(subcategory => subcategory.subcategory_id === transaction.subcategory_id)[0].subcategory_name)
+            })
+            .catch(error => {
+                console.error('There was an error!', error);
+            });
+
+        axios.get(`/api/currencies`)
+            .then(response => {
+                setSubcategory(response.data.filter(currencies => currencies.currency_id === transaction.currency_id)[0].currency_name)
             })
             .catch(error => {
                 console.error('There was an error!', error);
@@ -43,7 +52,7 @@ function Transaction({ transaction }) {
             <td>{transaction.transaction_amount}</td>
             <td>{category}</td>
             <td>{subcategory}</td>
-            <td>{transaction.currency_id}</td>
+            <td>{currency}</td>
             <td>{user}</td>
             <td>{transaction.transaction_type}</td>
         </>
