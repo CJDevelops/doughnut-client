@@ -27,7 +27,7 @@ function Transaction({ transaction }) {
 
         axios.get(`/api/users`)
             .then(response => {
-                setUser(response.data.filter(user => user.user_id === transaction.user_id)[0].username.uppercase)
+                setUser(response.data.filter(user => user.user_id === transaction.user_id)[0].username.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' '))
             })
             .catch(error => {
                 console.error('There was an error!', error);
