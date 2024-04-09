@@ -7,9 +7,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const AddTransaction = () => {
     return (
-        <div>
-            <h1>Add Transaction</h1>
-        </div>
+        <Button variant="primary"><FontAwesomeIcon icon={faPlus} /></Button>
     );
 };
 
