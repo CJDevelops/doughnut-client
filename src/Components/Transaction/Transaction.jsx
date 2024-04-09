@@ -28,7 +28,7 @@ function Transaction({ transaction }) {
 
         axios.get(`/api/currencies`)
             .then(response => {
-                setSubcategory(response.data.filter(currencies => currencies.currency_id === transaction.currency_id)[0].currency_name)
+                setCurrency(response.data.filter(currencies => currencies.currency_id === transaction.currency_id)[0].currency_name)
             })
             .catch(error => {
                 console.error('There was an error!', error);
