@@ -88,24 +88,24 @@ const AddTransaction = () => {
 
                     <Form.Group controlId="formSubcategory">
                         <Form.Label>Subcategory</Form.Label>
-                        <Form.Control as="select" name="subcategory" value={form.subcategory} onChange={handleChange} required>
+                        <Form.Select name="subcategory" value={form.subcategory} onChange={handleChange} required>
                             {subcategories.filter(subcategory => subcategory.category_id === Number(form.category)).map(subcategory => <option key={subcategory.subcategory_id} value={subcategory.subcategory_id}>{subcategory.subcategory_name}</option>)}
-                        </Form.Control>
+                        </Form.Select>
                     </Form.Group>
 
                     <Form.Group controlId="formCurrency">
                         <Form.Label>Currency</Form.Label>
-                        <Form.Control as="select" name="currency" value={form.currency} onChange={handleChange} required>
+                        <Form.Select name="currency" value={form.currency} onChange={handleChange} required>
                             {currencies.map(currency => <option key={currency.currency_id} value={currency.currency_id}>{currency.currency_name}</option>)}
-                        </Form.Control>
+                        </Form.Select>
                     </Form.Group>
 
                     <Form.Group controlId="formType">
                         <Form.Label>Type</Form.Label>
-                        <Form.Control as="select" name="type" value={form.type} onChange={handleChange} required>
+                        <Form.Select  name="type" value={form.type} onChange={handleChange} required>
                             <option value="I">Income</option>
                             <option value="E">Expense</option>
-                        </Form.Control>
+                        </Form.Select>
 
                     </Form.Group>
                 </Form>
