@@ -26,6 +26,7 @@ const AddTransaction = () => {
         currency: '',
         type: ''
     });
+    const [errors, setErrors] = useState({ name: '', amount: '' });
 
     useEffect(() => {
         axios.get('/api/categories').then(response => setCategories(response.data));
