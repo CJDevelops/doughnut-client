@@ -73,7 +73,7 @@ const AddTransaction = () => {
                     <Form.Group controlId="formSubcategory">
                         <Form.Label>Subcategory</Form.Label>
                         <Form.Control as="select" name="subcategory" value={form.subcategory} onChange={handleChange} required>
-                            {subcategories.map(subcategory => <option key={subcategory.subcategory_id} value={subcategory.subcategory_id}>{subcategory.subcategory_name}</option>)}
+                            {subcategories.filter(subcategory => subcategory.category_id === form.category).map(subcategory => <option key={subcategory.subcategory_id} value={subcategory.subcategory_id}>{subcategory.subcategory_name}</option>)}
                         </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="formCurrency">
@@ -89,7 +89,6 @@ const AddTransaction = () => {
                             <option value="E">Expense</option>
                         </Form.Control>
                     </Form.Group>
-                    <Button variant="primary" type="submit">Submit</Button>
                 </Form>
 
                 </Modal.Body>
@@ -97,7 +96,7 @@ const AddTransaction = () => {
                     <Button variant="danger" onClick={handleClose}>
                         Cancel
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="primary" onClick={handleSubmit}>
                         Add
                     </Button>
                 </Modal.Footer>
