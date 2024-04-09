@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col'
 import TransactionList from './Components/Transaction/TransactionList'
 import CategoryPieChart from './Components/Charts/CategoryPieChart'
 import MoneyLineGraph from './Components/Charts/MoneyLineGraph'
+import TopBar from './Components/TopBar'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <Container fluid>
+        <TopBar />
         <Row>
           <Col>
             <TransactionList />
