@@ -1,25 +1,17 @@
 import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 function TopBar() {
     return (
-        <Nav>
-            <Nav.Item>
-                <Nav.Link href="/transactions">Transactions</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link href="/categories">Categories</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link href="/subcategories">Subcategories</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link href="/currencies">Currencies</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link href="/users">Users</Nav.Link>
-            </Nav.Item>
-        </Nav>
+        <Navbar>
+            <Navbar.Brand href="#home">Doughnut</Navbar.Brand>
+            <Nav className="me-auto">
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="#features">Features</Nav.Link>
+                <Nav.Link href="#pricing">Pricing</Nav.Link>
+            </Nav>
+        </Navbar>
     );
 }
 
