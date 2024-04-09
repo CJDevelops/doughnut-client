@@ -18,12 +18,12 @@ function App() {
             <h3>Transaction List</h3>
           </Col>
           <Col>
-            <h1>Donut Category Pie Chart</h1>
+            <h3>Donut Category Pie Chart</h3>
           </Col>
         </Row>
         <Row>
           <Col>
-            <h1>Money Line Graph</h1>
+            <h3>Money Line Graph</h3>
           </Col>
         </Row>
       </Container>
