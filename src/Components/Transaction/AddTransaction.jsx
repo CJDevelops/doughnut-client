@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -24,11 +25,11 @@ const AddTransaction = () => {
                     <p>Modal body text goes here.</p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
+                    <Button variant="danger" onClick={handleClose}>
+                        Cancel
                     </Button>
                     <Button variant="primary" onClick={handleClose}>
-                        Save Changes
+                        Add
                     </Button>
                 </Modal.Footer>
             </Modal>
