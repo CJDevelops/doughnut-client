@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 function Transaction({ transaction }) {
     return (
         <div>
-            <h6>Transaction ID: {transaction.transaction_id}</h6>
-            <p>Name: {transaction.transaction_name}</p>
-            <p>Date: {new Date(transaction.transaction_date).toLocaleDateString()}</p>
-            <p>Amount: {transaction.transaction_amount}</p>
-            <p>Category ID: {transaction.category_id}</p>
-            <p>Subcategory ID: {transaction.subcategory_id}</p>
-            <p>Currency ID: {transaction.currency_id}</p>
-            <p>User ID: {transaction.user_id}</p>
-            <p>Type: {transaction.transaction_type}</p>
+            <td>Transaction ID: {transaction.transaction_id}</td>
+            <td>Name: {transaction.transaction_name}</td>
+            <td>Date: {new Date(transaction.transaction_date).toLocaleDateString()}</td>
+            <td>Amount: {transaction.transaction_amount}</td>
+            <td>Category ID: {transaction.category_id}</td>
+            <td>Subcategory ID: {transaction.subcategory_id}</td>
+            <td>Currency ID: {transaction.currency_id}</td>
+            <td>User ID: {transaction.user_id}</td>
+            <td>Type: {transaction.transaction_type}</td>
         </div>
     );
 }
