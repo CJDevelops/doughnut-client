@@ -19,7 +19,6 @@ function App() {
       <Container fluid>
         <Row>
           <Col>
-            <h3>Transaction List</h3>
             <TransactionList />
           </Col>
           <Col>
