@@ -51,7 +51,7 @@ const AddTransaction = () => {
 
         if (Object.keys(formErrors).length === 0) {
             // No errors, submit the form
-            console.log('Form submitted');
+            console.log(form);
         }
     };
 
