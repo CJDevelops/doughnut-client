@@ -56,38 +56,45 @@ const AddTransaction = () => {
                 <Modal.Body>
 
                 <Form onSubmit={handleSubmit}>
+
                     <Form.Group controlId="formName">
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="text" name="name" value={form.name} onChange={handleChange} required />
                     </Form.Group>
+
                     <Form.Group controlId="formAmount">
                         <Form.Label>Amount</Form.Label>
                         <Form.Control type="number" name="amount" value={form.amount} onChange={handleChange} required />
                     </Form.Group>
+
                     <Form.Group controlId="formCategory">
                         <Form.Label>Category</Form.Label>
                         <Form.Control as="select" name="category" value={form.category} onChange={handleChange} required>
                             {categories.map(category => <option key={category.category_id} value={category.category_id}>{category.category_name}</option>)}
                         </Form.Control>
                     </Form.Group>
+
                     <Form.Group controlId="formSubcategory">
-    <Form.Label>Subcategory</Form.Label>
-    <Form.Control as="select" name="subcategory" value={form.subcategory} onChange={handleChange} required>
-        {subcategories.filter(subcategory => subcategory.category_id === Number(form.category)).map(subcategory => <option key={subcategory.subcategory_id} value={subcategory.subcategory_id}>{subcategory.subcategory_name}</option>)}
-    </Form.Control>
-</Form.Group>
+                        <Form.Label>Subcategory</Form.Label>
+                        <Form.Control as="select" name="subcategory" value={form.subcategory} onChange={handleChange} required>
+                            {subcategories.filter(subcategory => subcategory.category_id === Number(form.category)).map(subcategory => <option key={subcategory.subcategory_id} value={subcategory.subcategory_id}>{subcategory.subcategory_name}</option>)}
+                        </Form.Control>
+                    </Form.Group>
+
                     <Form.Group controlId="formCurrency">
                         <Form.Label>Currency</Form.Label>
                         <Form.Control as="select" name="currency" value={form.currency} onChange={handleChange} required>
                             {currencies.map(currency => <option key={currency.currency_id} value={currency.currency_id}>{currency.currency_name}</option>)}
                         </Form.Control>
                     </Form.Group>
+
                     <Form.Group controlId="formType">
                         <Form.Label>Type</Form.Label>
                         <Form.Control as="select" name="type" value={form.type} onChange={handleChange} required>
                             <option value="I">Income</option>
                             <option value="E">Expense</option>
                         </Form.Control>
+                        
                     </Form.Group>
                 </Form>
 
