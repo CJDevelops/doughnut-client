@@ -29,12 +29,12 @@ function App() {
             <CategoryPieChart />
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col>
             <h3>Money Line Graph</h3>
             <MoneyLineGraph />
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </>
   )
