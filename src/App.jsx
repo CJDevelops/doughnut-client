@@ -19,6 +19,7 @@ function App() {
         <Row>
           <Col>
             <h3>Transaction List</h3>
+            <TransactionList />
           </Col>
           <Col>
             <h3>Donut Category Pie Chart</h3>
