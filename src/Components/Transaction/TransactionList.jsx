@@ -23,14 +23,13 @@ function TransactionList() {
             <Table striped hover>
                 <thead>
                     <tr>
-                        <th>Transaction ID</th>
                         <th>Name</th>
                         <th>Date</th>
                         <th>Amount</th>
-                        <th>Category ID</th>
-                        <th>Subcategory ID</th>
-                        <th>Currency ID</th>
-                        <th>User ID</th>
+                        <th>Category</th>
+                        <th>Subcategory</th>
+                        <th>Currency</th>
+                        <th>User</th>
                         <th>Type</th>
                     </tr>
                 </thead>
