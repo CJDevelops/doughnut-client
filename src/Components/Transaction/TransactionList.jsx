@@ -4,10 +4,9 @@ import axios from 'axios';
 
 import Table from 'react-bootstrap/Table';
 import Stack from 'react-bootstrap/Stack';
-import Button from 'react-bootstrap/Button';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
+import AddTransaction from './AddTransaction';
 
 function TransactionList() {
     const [transactions, setTransactions] = useState([]);
