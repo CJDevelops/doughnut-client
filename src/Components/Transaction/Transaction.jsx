@@ -54,7 +54,7 @@ Transaction.propTypes = {
     transaction: PropTypes.shape({
         transaction_id: PropTypes.number.isRequired,
         transaction_name: PropTypes.string.isRequired,
-        transaction_date: PropTypes.instanceOf(Date).isRequired,
+        transaction_date: PropTypes.string.isRequired,
         transaction_amount: PropTypes.string.isRequired,
         category_id: PropTypes.number.isRequired,
         subcategory_id: PropTypes.number.isRequired,
