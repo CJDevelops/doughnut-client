@@ -67,8 +67,15 @@ const AddTransaction = () => {
         setErrors(formErrors);
 
         if (Object.keys(formErrors).length === 0) {
-            // No errors, submit the form
-            console.log(form);
+            // No errors, convert form values to numbers and submit the form
+            const submittedForm = {
+                ...form,
+                category: Number(form.category),
+                subcategory: Number(form.subcategory),
+                currency: Number(form.currency),
+                amount: Number(form.amount),
+            };
+            console.log(submittedForm);
         }
     };
 
