@@ -81,9 +81,9 @@ const AddTransaction = () => {
 
                     <Form.Group controlId="formCategory">
                         <Form.Label>Category</Form.Label>
-                        <Form.Control as="select" name="category" value={form.category} onChange={handleChange} required>
+                        <Form.Select name="category" value={form.category} onChange={handleChange} required>
                             {categories.map(category => <option key={category.category_id} value={category.category_id}>{category.category_name}</option>)}
-                        </Form.Control>
+                        </Form.Select>
                     </Form.Group>
 
                     <Form.Group controlId="formSubcategory">
