@@ -54,7 +54,7 @@ function Transaction({ transaction }) {
             <td>{subcategory}</td>
             <td>{currency}</td>
             <td>{user}</td>
-            <td>{transaction.transaction_type === 'I' ? <Badge pill bg="sucess">Income</Badge> : 'Expense'}</td>
+            <td>{transaction.transaction_type === 'I' ? <Badge pill bg="success">Income</Badge> : 'Expense'}</td>
         </>
     );
 }
