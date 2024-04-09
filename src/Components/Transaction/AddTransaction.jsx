@@ -71,11 +71,11 @@ const AddTransaction = () => {
                         </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="formSubcategory">
-                        <Form.Label>Subcategory</Form.Label>
-                        <Form.Control as="select" name="subcategory" value={form.subcategory} onChange={handleChange} required>
-                            {subcategories.filter(subcategory => subcategory.category_id === form.category).map(subcategory => <option key={subcategory.subcategory_id} value={subcategory.subcategory_id}>{subcategory.subcategory_name}</option>)}
-                        </Form.Control>
-                    </Form.Group>
+    <Form.Label>Subcategory</Form.Label>
+    <Form.Control as="select" name="subcategory" value={form.subcategory} onChange={handleChange} required>
+        {subcategories.filter(subcategory => subcategory.category_id === Number(form.category)).map(subcategory => <option key={subcategory.subcategory_id} value={subcategory.subcategory_id}>{subcategory.subcategory_name}</option>)}
+    </Form.Control>
+</Form.Group>
                     <Form.Group controlId="formCurrency">
                         <Form.Label>Currency</Form.Label>
                         <Form.Control as="select" name="currency" value={form.currency} onChange={handleChange} required>
