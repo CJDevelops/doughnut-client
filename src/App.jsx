@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col'
 
 import TransactionList from './Components/Transaction/TransactionList'
 import CategoryPieChart from './Components/Charts/CategoryPieChart'
+import MoneyLineGraph from './Components/Charts/MoneyLineGraph'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Row>
           <Col>
             <h3>Money Line Graph</h3>
+            <MoneyLineGraph />
           </Col>
         </Row>
       </Container>
