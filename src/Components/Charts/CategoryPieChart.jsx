@@ -3,7 +3,7 @@ import React from 'react';
 function CategoryPieChart() {
     return (
         <div>
-            <h1>Transaction List</h1>
+            <h3>Pie Chart</h3>
         </div>
     );
 }
