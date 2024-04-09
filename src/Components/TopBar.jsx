@@ -10,8 +10,8 @@ function TopBar() {
                 <Navbar.Brand>Doughnut</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link>Home</Nav.Link>
-                    <Nav.Link>Manage Data</Nav.Link>
-                    <Nav.Link className='ms-auto'>Log Out</Nav.Link>
+                    <Nav.Link className='me-auto'>Manage Data</Nav.Link>
+                    <Nav.Link>Log Out</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
