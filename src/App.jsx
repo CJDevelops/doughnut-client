@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import TransactionList from './Components/Transaction/TransactionList'
+import CategoryPieChart from './Components/Charts/CategoryPieChart'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           </Col>
           <Col>
             <h3>Donut Category Pie Chart</h3>
+            <CategoryPieChart />
           </Col>
         </Row>
         <Row>
