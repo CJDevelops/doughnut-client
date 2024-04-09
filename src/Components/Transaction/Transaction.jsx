@@ -59,7 +59,7 @@ function Transaction({ transaction }) {
             <td>{subcategory}</td>
             <td>{currency}</td>
             <td>{user}</td>
-            <td><td><TransactionTypeBadge type={transaction.transaction_type} /></td></td>
+            <td><TransactionTypeBadge type={transaction.transaction_type} /></td>
         </>
     );
 }
