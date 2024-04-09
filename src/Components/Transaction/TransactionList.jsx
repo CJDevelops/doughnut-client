@@ -3,6 +3,8 @@ import Transaction from './Transaction';
 import axios from 'axios';
 
 import Table from 'react-bootstrap/Table';
+import Stack from 'react-bootstrap/Stack';
+import Button from 'react-bootstrap/Button';
 
 function TransactionList() {
     const [transactions, setTransactions] = useState([]);
@@ -19,6 +21,10 @@ function TransactionList() {
 
     return (
         <div>
+            <Stack direction="horizontal" gap={3}>
+                <Button variant="primary">Add Transaction</Button>
+                <Button variant="secondary">Refresh</Button>
+            </Stack>
             
             <Table striped hover>
                 <thead>
