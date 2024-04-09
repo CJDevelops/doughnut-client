@@ -15,7 +15,15 @@ function App() {
       <Container fluid>
         <Row>
           <Col>
-            <h1>Donut</h1>
+            <h1>Donut Transaction List</h1>
+          </Col>
+          <Col>
+            <h1>Donut Category Pie Chart</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h1>Money Line Graph</h1>
           </Col>
         </Row>
       </Container>
