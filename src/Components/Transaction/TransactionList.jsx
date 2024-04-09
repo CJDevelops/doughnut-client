@@ -20,7 +20,7 @@ function TransactionList() {
     return (
         <div>
             
-            <Table striped bordered hover>
+            <Table striped hover>
                 <thead>
                     <tr>
                         <th>Transaction ID</th>
