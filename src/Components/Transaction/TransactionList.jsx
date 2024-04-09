@@ -15,8 +15,7 @@ function TransactionList() {
     useEffect(() => {
         axios.get('/api/transactions')
             .then(response => {
-                const sortedTransactions = response.data.sort((a, b) => new Date(b.transaction_date) - new Date(a.transaction_date));
-                setTransactions(sortedTransactions);
+                setTransactions(response.data);
             })
             .catch(error => {
                 console.error('There was an error!', error);
