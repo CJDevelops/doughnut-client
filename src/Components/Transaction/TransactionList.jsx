@@ -25,7 +25,7 @@ function TransactionList() {
     return (
         <div>
             <Stack direction="horizontal" gap={3}>
-                <h3 className='me-auto'>Transactions</h3>
+                <h4 className='me-auto'>Transactions</h4>
                 <Button variant="primary"><FontAwesomeIcon icon={faPlus} /></Button>
             </Stack>
             
