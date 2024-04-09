@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+
 import axios from 'axios';
 
 function Transaction({ transaction }) {
@@ -58,18 +58,6 @@ function Transaction({ transaction }) {
     );
 }
 
-Transaction.propTypes = {
-    transaction: PropTypes.shape({
-        transaction_id: PropTypes.number.isRequired,
-        transaction_name: PropTypes.string.isRequired,
-        transaction_date: PropTypes.string.isRequired,
-        transaction_amount: PropTypes.string.isRequired,
-        category_id: PropTypes.number.isRequired,
-        subcategory_id: PropTypes.number.isRequired,
-        currency_id: PropTypes.number.isRequired,
-        user_id: PropTypes.number.isRequired,
-        transaction_type: PropTypes.string.isRequired
-    }).isRequired
-};
+
 
 export default Transaction;
