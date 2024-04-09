@@ -19,7 +19,7 @@ function Transaction({ transaction }) {
 
         axios.get(`/api/subcategories`)
             .then(response => {
-                setSubcategory(response.data.filter(subcategory => subcategory.subcategory_id === transaction.subcategory_id)[0].name)
+                setSubcategory(response.data.filter(subcategory => subcategory.subcategory_id === transaction.subcategory_id)[0].subcategory_name)
             })
             .catch(error => {
                 console.error('There was an error!', error);
@@ -27,7 +27,7 @@ function Transaction({ transaction }) {
 
         axios.get(`/api/users`)
             .then(response => {
-                setUser(response.data.filter(user => user.user_id === transaction.user_id)[0].name)
+                setUser(response.data.filter(user => user.user_id === transaction.user_id)[0].user_name)
             })
             .catch(error => {
                 console.error('There was an error!', error);
