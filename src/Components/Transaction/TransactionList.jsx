@@ -6,6 +6,9 @@ import Table from 'react-bootstrap/Table';
 import Stack from 'react-bootstrap/Stack';
 import Button from 'react-bootstrap/Button';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 function TransactionList() {
     const [transactions, setTransactions] = useState([]);
 
@@ -23,7 +26,7 @@ function TransactionList() {
         <div>
             <Stack direction="horizontal" gap={3}>
                 <h3 className='me-auto'>Transactions</h3>
-                <Button variant="primary">+</Button>
+                <Button variant="primary"><FontAwesomeIcon icon="fa-solid fa-plus" /></Button>
             </Stack>
             
             <Table striped hover>
