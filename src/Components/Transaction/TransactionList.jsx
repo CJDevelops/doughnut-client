@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Transaction from './Transaction';
 import axios from 'axios';
 
+import Table from 'react-bootstrap/Table';
+
 function TransactionList() {
     const [transactions, setTransactions] = useState([]);
 
@@ -17,10 +19,30 @@ function TransactionList() {
 
     return (
         <div>
-            <h6>Transaction List</h6>
-            {transactions.map(transaction => (
-                <Transaction key={transaction.id} transaction={transaction} />
-            ))}
+            
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Category ID</th>
+                        <th>Subcategory ID</th>
+                        <th>Currency ID</th>
+                        <th>User ID</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {transactions.map(transaction => (
+                        <tr key={transaction.transaction_id}>
+                            <Transaction transaction={transaction} />
+                        </tr>
+                    ))}
+                </tbody>
+            </Table>
+            
         </div>
     );
 }
