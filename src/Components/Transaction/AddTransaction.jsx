@@ -15,6 +15,8 @@ const AddTransaction = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [isLoading, setIsLoading] = useState(true);
+
     const [categories, setCategories] = useState([]);
     const [subcategories, setSubcategories] = useState([]);
     const [currencies, setCurrencies] = useState([]);
@@ -29,9 +31,24 @@ const AddTransaction = () => {
     const [errors, setErrors] = useState({ name: '', amount: '' });
 
     useEffect(() => {
-        axios.get('/api/categories').then(response => setCategories(response.data));
-        axios.get('/api/subcategories').then(response => setSubcategories(response.data));
-        axios.get('/api/currencies').then(response => setCurrencies(response.data));
+        Promise.all([
+            axios.get('/api/categories'),
+            axios.get('/api/subcategories'),
+            axios.get('/api/currencies')
+        ]).then(([categoriesResponse, subcategoriesResponse, currenciesResponse]) => {
+            setCategories(categoriesResponse.data);
+            setSubcategories(subcategoriesResponse.data);
+            setCurrencies(currenciesResponse.data);
+            setForm({
+                name: '',
+                amount: '',
+                category: categoriesResponse.data[0]?.category_id,
+                subcategory: subcategoriesResponse.data[0]?.subcategory_id,
+                currency: currenciesResponse.data[0]?.currency_id,
+                type: 'I',
+            });
+            setIsLoading(false);
+        });
     }, []);
 
     const handleChange = (event) => {
@@ -54,6 +71,10 @@ const AddTransaction = () => {
             console.log(form);
         }
     };
+
+    if (isLoading) {
+        return <p>Loading...</p>; // Or replace with a spinner
+    }
 
     return (
         <>
